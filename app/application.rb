@@ -7,8 +7,9 @@ class Application
     @@items = []
     
     #item_name = req.params["item_name"]
-    if req.path=="/items/<ITEM NAME>"
-    #if req.path.match(/items/)
+    #if req.path=="/items/<ITEM NAME>"
+    
+    if req.path.match(/items/)
       item_req = req.params["item"]
         if @@items.include?(item_req) 
           price = item_req.price
