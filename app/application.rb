@@ -6,12 +6,12 @@ class Application
     
     @@items = []
     
-    item_name = req.params["item_name"]
+    #item_name = req.params["item_name"]
+    #if req.path=="/items/#{item_name}"
+    if req.path.match(/items/)
     
-    #if req.path.match(/items/)
-    if req.path=="/items/#{item_name}"
       resp.write "You requested the songs"
-        #item_name = Item.name
+        
         item_req = req.params["item"]
         if @@items.include?(item_req) 
           price = item_req.price
