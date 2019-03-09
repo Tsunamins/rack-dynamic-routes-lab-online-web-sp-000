@@ -1,10 +1,12 @@
 class Application
  
+ @@items = []
+ 
   def call(env)
     resp = Rack::Response.new
     req = Rack::Request.new(env)
     
-    @@items = []
+    
     
     #some other miscellaneous stuff I was trying
     # #item_name = req.params["item_name"]
@@ -12,7 +14,9 @@ class Application
     
     
     #what sort of works but not really
+    
     if req.path.match(/items/)
+      binding.pry
       item_req = req.params["item"]
         if @@items.include?(item_req) 
           price = item_req.price
