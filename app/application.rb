@@ -12,20 +12,15 @@ class Application
       
       item_name = req.path.split("/items/").last
       
-      @@items.each do |find_item|
-        
-        if find_item.name == item_name 
-          
-          resp.write find_item.price
-        else 
+        item = @@items.find{|i| i.name == item_name}
+      
+          resp.write item.price
           resp.write "Item not found"
             resp.status 400
           end 
         end 
         
-      # item = @@items.find{|i| i.name == item_name}
-      
-      #     resp.write item.price
+     
     
         
     else
