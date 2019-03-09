@@ -12,24 +12,14 @@ class Application
       
       item_name = req.path.split("/items/").last
       
-      if @@items.include?(item_name)
-        @@items.each do |item_price| 
-          binding.pry
-          provide_price = item_price.price
-        
-        resp.write provide_price
-      end
-        
-          else 
+        if @@items.include?(item_name)
+          item = @@items.find{|i| i.name == item_name}
+     
+          resp.write item.price
+        else 
             resp.write "Item not found"
             resp.status 400
-          end
-        
-      
-      # item = @@items.find{|i| i.name == item_name}
-     
-      #   resp.write item.price
-          
+        end
         
     else
       resp.write "Route not found"
