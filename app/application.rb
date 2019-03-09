@@ -12,14 +12,15 @@ class Application
       
       item_name = req.path.split("/items/").last
       
-      if @@items.include?(item_name) 
+      if @@items.include?(item_name)
+        
         @@items.find do |i|
-          i.name == item_name
+          if i.name == item_name
           resp.write i.price
-        end 
-      else 
-        resp.write "Item not found"
-          resp.status 400
+          else 
+            resp.write "Item not found"
+            resp.status 400
+          end
         end
       
       # item = @@items.find{|i| i.name == item_name}
