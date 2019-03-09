@@ -17,6 +17,7 @@ class Application
           provide_price = item_price.price
         
         resp.write provide_price
+      end
         
           else 
             resp.write "Item not found"
