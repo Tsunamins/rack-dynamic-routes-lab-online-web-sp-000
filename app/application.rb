@@ -9,7 +9,7 @@ class Application
         item_name = Item.name
         item_req = req.params["item"]
         if item_name == item_req 
-          
+          resp.write item.price
     else
       resp.write "Route not found"
       resp.status = 404
