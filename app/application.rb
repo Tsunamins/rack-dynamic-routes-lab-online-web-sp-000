@@ -11,10 +11,10 @@ class Application
     if req.path.match(/items/)
       
       item_name = req.path.split("/items/").last
-      if item_name != nil
+      if item_name.class == String
           item = @@items.find{|i| i.name == item_name}
           resp.write item.price
-        elsif item_name == nil
+        else
             resp.write "Item not found"
             resp.status 400
         end
