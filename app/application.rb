@@ -10,7 +10,7 @@ class Application
       resp.write "You requested the songs"
         item_name = Item.name
         item_req = req.params["item"]
-        if item_name == item_req 
+        if @@items.include?(item_req) 
           resp.write "#{item.price}"
         else 
           resp.write "Item not found"
