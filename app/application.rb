@@ -16,8 +16,10 @@ class Application
     #what sort of works but not really
     
     if req.path.match(/items/)
-      binding.pry
-      item_req = req.params["item"]
+      
+      item_name = req.path.split("/items/").last
+      
+      item = @@items.find{|i| i.name
         if @@items.include?(item_req) 
           price = item_req.price
           resp.write "#{price}"
