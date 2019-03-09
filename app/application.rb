@@ -14,7 +14,7 @@ class Application
       
       @@items.each do |find_item|
         binding.pry
-        if find_item == item_name 
+        if find_item.name == item_name 
           
           resp.write find_item.price
         else 
