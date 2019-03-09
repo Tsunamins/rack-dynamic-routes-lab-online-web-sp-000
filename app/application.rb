@@ -6,8 +6,8 @@ class Application
     
     @@items = []
     
-    
-    if req.path=="/items"
+    if req.path.match(/items/)
+    #if req.path=="/items"
       resp.write "You requested the songs"
         #item_name = Item.name
         item_req = req.params["item"]
