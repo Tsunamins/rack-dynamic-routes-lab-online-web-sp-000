@@ -11,7 +11,7 @@ class Application
         #item_name = Item.name
         item_req = req.params["item"]
         if @@items.include?(item_req) 
-          resp.write "#{item.price}"
+          resp.write "#{item_req.price}"
         else 
           resp.write "Item not found"
           resp.status 400
