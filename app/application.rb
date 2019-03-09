@@ -10,7 +10,7 @@ class Application
     #if req.path=="/items/#{item_name}"
     if req.path==/items/:name
     
-    #if req.path.match(/items/)
+    #if req.path.match(/items/:name)
       item_req = req.params["item"]
         if @@items.include?(item_req) 
           price = item_req.price
