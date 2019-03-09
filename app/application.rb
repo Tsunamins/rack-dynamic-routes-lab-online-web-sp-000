@@ -4,6 +4,7 @@ class Application
     resp = Rack::Response.new
     req = Rack::Request.new(env)
     
+    @@items = []
     
     
     if req.path=="/items"
@@ -25,3 +26,5 @@ class Application
     resp.finish
   end
 end
+
+ 
