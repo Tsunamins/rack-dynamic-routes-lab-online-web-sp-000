@@ -6,8 +6,10 @@ class Application
  
     if req.path=="/items"
       resp.write "You requested the songs"
+        item_name = Item.name
         item_req = req.params["item"]
-        if
+        if item_name == item_req 
+          
     else
       resp.write "Route not found"
       resp.status = 404
