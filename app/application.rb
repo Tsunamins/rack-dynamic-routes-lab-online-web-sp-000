@@ -9,7 +9,7 @@ class Application
     #some other miscellaneous stuff I was trying
     # #item_name = req.params["item_name"]
     # if req.path=="/items/#{item_name}"
-    # if req.path==/items/:name
+    
     
     #what sort of works but not really
     if req.path.match(/items/)
