@@ -6,11 +6,13 @@ class Application
     
     @@items = []
     
-    #item_name = req.params["item_name"]
-    if req.path=="/items/#{item_name}"
-    if req.path==/items/:name
+    #some other miscellaneous stuff I was trying
+    # #item_name = req.params["item_name"]
+    # if req.path=="/items/#{item_name}"
+    # if req.path==/items/:name
     
-    #if req.path.match(/items/:name)
+    #what sort of works but not really
+    if req.path.match(/items/:name)
       item_req = req.params["item"]
         if @@items.include?(item_req) 
           price = item_req.price
