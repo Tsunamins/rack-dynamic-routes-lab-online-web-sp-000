@@ -20,16 +20,13 @@ class Application
       else 
         resp.write "Item not found"
           resp.status 400
-      
-      item = @@items.find{|i| i.name == item_name}
-      binding.pry
-      if item == nil
-        
-        
-      else 
-        resp.write item.price
-          
         end
+      
+      # item = @@items.find{|i| i.name == item_name}
+     
+      #   resp.write item.price
+          
+        
     else
       resp.write "Route not found"
       resp.status = 404
