@@ -8,7 +8,7 @@ class Application
     
     if req.path=="/items"
       resp.write "You requested the songs"
-        item_name = Item.name
+        #item_name = Item.name
         item_req = req.params["item"]
         if @@items.include?(item_req) 
           resp.write "#{item.price}"
