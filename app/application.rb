@@ -7,6 +7,7 @@ class Application
     @@items = []
     
     #item_name = req.params["item_name"]
+    #if req.path=="/items/#{item_name}"
     #if req.path=="/items/<ITEM NAME>"
     
     if req.path.match(/items/)
