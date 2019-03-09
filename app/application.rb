@@ -11,9 +11,10 @@ class Application
     if req.path.match(/items/)
       
       item_name = req.path.split("/items/").last
-      binding.pry
+      
       if @@items.include?(item_name)
         @@items.each do |item_price| 
+          binding.pry
           provide_price = item_price.price
         
         resp.write provide_price
