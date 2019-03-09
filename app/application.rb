@@ -8,7 +8,7 @@ class Application
     
     #item_name = req.params["item_name"]
     #if req.path=="/items/#{item_name}"
-    if req.path=="/items/:name"
+    if req.path==/items/:name
     
     #if req.path.match(/items/)
       item_req = req.params["item"]
