@@ -13,7 +13,7 @@ class Application
       item_name = req.path.split("/items/").last
       
       @@items.each do |find_item|
-        binding.pry
+        
         if find_item.name == item_name 
           
           resp.write find_item.price
